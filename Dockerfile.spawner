@@ -1,0 +1,9 @@
+FROM python:3.9
+
+RUN pip install docker requests Flask
+
+WORKDIR /app
+
+COPY spawner.py spawner.py
+
+CMD ["python", "spawner.py"]
